@@ -3,8 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angularhttp';
+  title = 'Angular 6 Project!';
+
+  myClickFunction() {
+    console.log('hello');
+  }
 }
