@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular 6 Project!';
+  title = 'User catalog';
 
   myClickFunction() {
     console.log('hello');

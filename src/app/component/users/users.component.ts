@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Response } from 'src/app/interface/response.interface';
 import { User } from 'src/app/interface/user.interface';
 import { UserService } from 'src/app/service/user.service';
 
@@ -8,23 +9,12 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  users: any[] = [];
+  response: Response;
   constructor(private userService: UserService) {}
   ngOnInit(): void {
     this.userService.getUsers(15).subscribe((results: any) => {
       console.log(results);
+      this.response = results;
     });
-
-    this.userService.getUser(12).subscribe((result: any) => {
-      console.log(result);
-    });
-    // this.getUsers(12);
   }
-
-  // getUsers(size: number): void {
-  //   this.userService.getUsers(15).subscribe((results: any) => {
-  //     console.log(results);
-  //     this.users = <User[]>results;
-  //   });
-  // }
 }
